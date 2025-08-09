@@ -1,0 +1,55 @@
+{
+  "name": "@landicefu/web-content-retriever",
+  "version": "1.0.0",
+  "description": "MCP server for retrieving web content as markdown using Jina AI API",
+  "main": "build/index.js",
+  "type": "module",
+  "bin": {
+    "web-content-retriever": "./build/index.js"
+  },
+  "files": [
+    "build/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "start": "node build/index.js",
+    "dev": "ts-node src/index.ts",
+    "bundle": "esbuild src/index.ts --bundle --platform=node --outfile=dist/bundle.js --format=esm --minify --tree-shaking=true",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "web-content",
+    "markdown",
+    "jina-ai",
+    "model-context-protocol",
+    "ai-tools"
+  ],
+  "author": "Landice Fu <landice.fu@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/landicefu/web-content-retriever.git"
+  },
+  "bugs": {
+    "url": "https://github.com/landicefu/web-content-retriever/issues"
+  },
+  "homepage": "https://github.com/landicefu/web-content-retriever#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.7",
+    "esbuild": "^0.25.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
