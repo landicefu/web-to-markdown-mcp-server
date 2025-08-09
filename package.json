@@ -1,11 +1,11 @@
 {
-  "name": "@landicefu/web-content-retriever",
+  "name": "@landicefu/web-to-markdown-mcp-server",
   "version": "1.0.0",
   "description": "MCP server for retrieving web content as markdown using Jina AI API",
   "main": "build/index.js",
   "type": "module",
   "bin": {
-    "web-content-retriever": "./build/index.js"
+    "web-to-markdown-mcp-server": "./build/index.js"
   },
   "files": [
     "build/",
@@ -33,12 +33,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/landicefu/web-content-retriever.git"
+    "url": "git+https://github.com/landicefu/web-to-markdown-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/landicefu/web-content-retriever/issues"
+    "url": "https://github.com/landicefu/web-to-markdown-mcp-server/issues"
   },
-  "homepage": "https://github.com/landicefu/web-content-retriever#readme",
+  "homepage": "https://github.com/landicefu/web-to-markdown-mcp-server#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
     "axios": "^1.6.0"

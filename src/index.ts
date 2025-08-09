@@ -33,14 +33,14 @@ const isValidGetWebContentArgs = (
   typeof args.url === 'string' &&
   isValidUrl(args.url);
 
-class WebContentRetrieverServer {
+class WebToMarkdownServer {
   private server: Server;
   private axiosInstance;
 
   constructor() {
     this.server = new Server(
       {
-        name: '@landicefu/web-content-retriever',
+        name: '@landicefu/web-to-markdown-mcp-server',
         version: '1.0.0',
       },
       {
@@ -58,7 +58,7 @@ class WebContentRetrieverServer {
     this.axiosInstance = axios.create({
       timeout: 30000, // 30 seconds timeout
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; @landicefu/web-content-retriever/1.0.0)',
+        'User-Agent': 'Mozilla/5.0 (compatible; @landicefu/web-to-markdown-mcp-server/1.0.0)',
         ...(JINA_API_TOKEN ? { 'Authorization': `Bearer ${JINA_API_TOKEN}` } : {}),
       },
     });
@@ -171,5 +171,5 @@ class WebContentRetrieverServer {
   }
 }
 
-const server = new WebContentRetrieverServer();
+const server = new WebToMarkdownServer();
 server.run().catch(console.error);

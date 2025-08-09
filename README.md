@@ -1,4 +1,4 @@
-# Web Content Retriever MCP Server
+# Web to Markdown MCP Server
 
 An MCP server that retrieves web content as markdown using the [Jina AI](https://jina.ai/) API.
 
@@ -12,10 +12,10 @@ An MCP server that retrieves web content as markdown using the [Jina AI](https:/
 
 ```bash
 # Install globally
-npm install -g @landicefu/web-content-retriever
+npm install -g @landicefu/web-to-markdown-mcp-server
 
 # Or install locally
-npm install @landicefu/web-content-retriever
+npm install @landicefu/web-to-markdown-mcp-server
 ```
 
 ## Getting Started with Jina AI
@@ -37,10 +37,10 @@ This package uses Jina AI's Reader API to convert web content to markdown. To us
 
 ```bash
 # With environment variable
-JINA_API_TOKEN=your_jina_token web-content-retriever
+JINA_API_TOKEN=your_jina_token web-to-markdown-mcp-server
 
 # Or using npx
-JINA_API_TOKEN=your_jina_token npx @landicefu/web-content-retriever
+JINA_API_TOKEN=your_jina_token npx @landicefu/web-to-markdown-mcp-server
 ```
 
 ### Tool: get_web_content_as_markdown
@@ -59,7 +59,7 @@ This tool retrieves web content from a specified URL and converts it to markdown
 
 ```javascript
 const result = await useMcpTool({
-  serverName: "web-content-retriever",
+  serverName: "web-to-markdown-mcp-server",
   toolName: "get_web_content_as_markdown",
   arguments: {
     url: "https://example.com"
