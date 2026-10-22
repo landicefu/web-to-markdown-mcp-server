@@ -1,6 +1,6 @@
 {
   "name": "@landicefu/web-to-markdown-mcp-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP server for retrieving web content as markdown using Jina AI API",
   "main": "build/index.js",
   "type": "module",
